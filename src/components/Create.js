@@ -42,7 +42,7 @@ const Create = () => {
                     }}
                 >
                     <img
-                        src="/newentry.svg"
+                        src="/images/newentry.svg"
                         alt="New entry"
                         style={{
                             width: '100%',
