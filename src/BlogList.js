@@ -11,6 +11,7 @@ const BlogList = (props) => {
                     <h2>{blog.title}</h2>
                     <p>Written by {blog.author}</p>
                     </Link>
+
                 </div>
             ))}
 
