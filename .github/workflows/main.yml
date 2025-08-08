@@ -1,0 +1,18 @@
+name: react blog application
+on: [push]
+jobs:
+  build: 
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+           react-version: '18.13.0'
+      - name: Install Dependencies
+        run: npm install
+      - name: Run Json Server (background)
+        run: Start-Process -NoNewWindow -FilePath "npx" -ArgumentList "json-server --watch data/db.json --port 8000"
+      - name: Run Tests
+        run: npm test
